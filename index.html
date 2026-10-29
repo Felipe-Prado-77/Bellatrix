@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08111f">
+  <link rel="manifest" href="manifest.webmanifest">
+  <title>BELLATRIX — Inteligência Comercial</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="BELLATRIX início">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span><strong>BELLATRIX</strong><small>INTELIGÊNCIA COMERCIAL</small></span>
+      </a>
+
+      <p class="nav-heading">Workspace</p>
+      <nav class="navigation">
+        <a class="nav-link is-current" href="#inicio"><span aria-hidden="true">▦</span> Visão geral</a>
+        <a class="nav-link" href="#pipeline"><span aria-hidden="true">◫</span> Pipeline</a>
+        <a class="nav-link" href="#contas"><span aria-hidden="true">♙</span> Contas</a>
+        <a class="nav-link" href="#insights"><span aria-hidden="true">✧</span> Insights</a>
+        <a class="nav-link" href="#mapa-calor"><span aria-hidden="true">▧</span> Mapa de vendas</a>
+        <a class="nav-link" href="#pesquisa-pedidos"><span aria-hidden="true">⌕</span> Pesquisar pedidos</a>
+      </nav>
+
+      <div class="sidebar-note">Protótipo para estudo<br>Nova Orion · dados simulados</div>
+    </aside>
+
+    <main class="main-content" id="inicio">
+      <header class="topbar">
+        <p>Workspace <span aria-hidden="true">/</span> <strong>Visão geral</strong></p>
+        <div class="topbar-actions">
+          <label class="profile-label" for="profile-select"><span>Perfil de demonstração</span>
+            <select id="profile-select">
+              <option value="seller">Vendedor</option>
+              <option value="manager">Gerente</option>
+            </select>
+          </label>
+          <button class="install-button" id="install-button" type="button" hidden>Instalar app</button>
+          <span class="date-chip">Período simulado</span>
+          <span class="user-avatar" aria-label="Nova Orion">NO</span>
+        </div>
+      </header>
+
+      <section class="manager-controls" id="manager-controls" hidden aria-label="Opções de visualização gerencial">
+        <label for="manager-scope">Mostrar</label>
+        <select id="manager-scope"><option value="company">Empresa toda</option><option value="mine">Minha carteira</option></select>
+        <span>O gerente também tem uma carteira individual neste exemplo.</span>
+      </section>
+
+      <!-- O pet fica no topo para ser o primeiro ponto de contato da tela. -->
+      <section class="pet-hero" aria-labelledby="pet-title">
+        <div class="pet-heading">
+          <div>
+            <p class="eyebrow">COMPANHEIRO VISUAL</p>
+            <h1 id="pet-title">Seu pet Bellatrix</h1>
+            <p class="pet-subtitle">Uma presença animada para acompanhar o painel.</p>
+          </div>
+          <span class="demo-badge"><i aria-hidden="true"></i> DEMONSTRAÇÃO · SEM IA</span>
+        </div>
+
+        <div class="pet-content">
+          <div class="pet-stage" id="pet-stage" data-expression="neutral">
+            <div class="pet-glow" aria-hidden="true"></div>
+            <img id="pet-image" src="assets/pet-neutral-sem-fundo.svg" alt="Pet Bellatrix com expressão neutra">
+            <span class="expression-label" id="expression-label">Neutro</span>
+          </div>
+
+          <div class="pet-interaction">
+            <p class="pet-speech-bubble" id="pet-speech" aria-live="polite">
+              Olá! Sou o pet demonstrativo do BELLATRIX. Escolha uma expressão para me animar.
+            </p>
+            <p class="control-label">Como estou me sentindo?</p>
+            <div class="expression-buttons" role="group" aria-label="Escolher expressão do pet">
+              <button class="expression-button is-selected" type="button" data-expression="neutral" aria-pressed="true">Neutro</button>
+              <button class="expression-button" type="button" data-expression="happy" aria-pressed="false">Feliz</button>
+              <button class="expression-button" type="button" data-expression="pensativo" aria-pressed="false">Pensando</button>
+              <button class="expression-button" type="button" data-expression="dormindo" aria-pressed="false">Dormindo</button>
+              <button class="expression-button" type="button" data-expression="surprised" aria-pressed="false">Surpreso</button>
+              <button class="expression-button" type="button" data-expression="rindo" aria-pressed="false">Rindo</button>
+              <button class="expression-button" type="button" data-expression="triste" aria-pressed="false">Triste</button>
+              <button class="expression-button" type="button" data-expression="bravo" aria-pressed="false">Bravo</button>
+              <button class="expression-button" type="button" data-expression="apaixonado" aria-pressed="false">Apaixonado</button>
+              <button class="expression-button" type="button" data-expression="winking" aria-pressed="false">Piscando</button>
+            </div>
+            <p class="pet-disclaimer">As falas e expressões são exemplos fixos. Não há IA conectada.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-heading" aria-labelledby="dashboard-title">
+        <div>
+          <p class="eyebrow">PAINEL EXECUTIVO</p>
+          <h2 id="dashboard-title">Visão geral comercial</h2>
+          <p class="section-description">Um primeiro esboço da área de trabalho do BELLATRIX.</p>
+        </div>
+        <span class="simulation-badge"><i aria-hidden="true"></i> DADOS FICTÍCIOS · SIMULAÇÃO</span>
+      </section>
+
+      <p class="simulation-notice"><strong>Protótipo de aprendizado:</strong> todos os indicadores abaixo são fictícios. Esta página não se conecta aos sistemas da Nova Orion.</p>
+
+      <section class="metrics-grid" aria-label="Indicadores simulados">
+        <article class="metric-card"><p>Vendas realizadas</p><strong id="metric-sales">R$ 86 mil</strong><span id="metric-sales-note">Carteira simulada</span></article>
+        <article class="metric-card"><p>Projeção do próximo período</p><strong id="metric-forecast">R$ 104 mil</strong><span>Estimativa demonstrativa</span></article>
+        <article class="metric-card"><p>Pedidos atendidos</p><strong id="metric-orders">19</strong><span>Pedidos simulados</span></article>
+        <article class="metric-card"><p>Valor médio por pedido</p><strong id="metric-average">R$ 4,5 mil</strong><span>Calculado com dados fictícios</span></article>
+      </section>
+
+      <section class="content-card regional-card" id="regiao" aria-labelledby="region-title">
+        <div class="card-heading"><div><h2 id="region-title">Produtos mais vendidos por região</h2><p id="region-note">Ranking ilustrativo por unidades</p></div>
+          <label class="region-picker" for="region-select">Região
+            <select id="region-select"><option>Sudeste</option><option>Sul</option><option>Nordeste</option><option>Centro-Oeste</option><option>Norte</option></select>
+          </label>
+        </div>
+        <div class="product-ranking" id="product-ranking" aria-live="polite"></div>
+        <p class="map-note">A seleção regional usa dados de demonstração. O mapa geográfico será ligado à base real depois que conhecermos os campos disponíveis no MSI.</p>
+      </section>
+
+      <section class="content-card heatmap-card" id="mapa-calor" aria-labelledby="heatmap-title">
+        <div class="card-heading"><div><p class="eyebrow">DISTRIBUIÇÃO GEOGRÁFICA</p><h2 id="heatmap-title">Mapa de calor de vendas</h2><p>Intensidade por região · valores fictícios</p></div>
+          <label class="region-picker" for="heatmap-period">Período
+            <select id="heatmap-period"><option value="current">Período atual</option><option value="previous">Período anterior</option></select>
+          </label>
+        </div>
+        <p class="heatmap-hint">Selecione uma região para ver seu total e os produtos em destaque.</p>
+        <div class="heatmap-grid" id="heatmap-grid" aria-label="Regiões do Brasil por intensidade de vendas"></div>
+        <div class="heatmap-legend"><span>Menor volume</span><i></i><span>Maior volume</span></div>
+        <div class="heatmap-detail" id="heatmap-detail" aria-live="polite"></div>
+      </section>
+
+      <section class="content-card orders-card" id="pesquisa-pedidos" aria-labelledby="orders-title">
+        <div class="card-heading"><div><p class="eyebrow">CONSULTA COMERCIAL</p><h2 id="orders-title">Pesquisa de pedidos</h2><p>Filtre por loja, vendedor, data ou produto.</p></div><span>DEMONSTRAÇÃO</span></div>
+        <form class="order-filters" id="order-filters">
+          <label>Nome da loja<input id="filter-store" type="search" placeholder="Ex.: Loja Aurora"></label>
+          <label>Nome do vendedor<input id="filter-seller" type="search" placeholder="Ex.: Ana Costa"></label>
+          <label>Data inicial<input id="filter-date-from" type="date"></label>
+          <label>Data final<input id="filter-date-to" type="date"></label>
+          <label>Produto<input id="filter-product" type="search" placeholder="Ex.: Produto Alpha"></label>
+          <button class="filter-button" type="submit">Aplicar filtros</button>
+          <button class="clear-filters" id="clear-order-filters" type="button">Limpar</button>
+        </form>
+        <p class="orders-count" id="orders-count" aria-live="polite"></p>
+        <div class="orders-table-wrap"><table class="orders-table"><thead><tr><th>Pedido</th><th>Data</th><th>Loja</th><th>Vendedor</th><th>Produto</th><th>Valor</th></tr></thead><tbody id="orders-results"></tbody></table></div>
+        <p class="map-note">Pedidos e valores são exemplos inventados; nenhum dado da empresa foi conectado.</p>
+      </section>
+
+      <section class="lower-grid">
+        <article class="content-card" id="pipeline">
+          <div class="card-heading"><div><h2>Pipeline</h2><p>Distribuição fictícia por etapa</p></div><span>SIMULADO</span></div>
+          <div class="pipeline-row"><div><span>Prospecção</span><strong>39%</strong></div><div class="bar-track"><i style="width:39%"></i></div></div>
+          <div class="pipeline-row"><div><span>Qualificação</span><strong>28%</strong></div><div class="bar-track"><i style="width:28%"></i></div></div>
+          <div class="pipeline-row"><div><span>Proposta</span><strong>17%</strong></div><div class="bar-track"><i style="width:17%"></i></div></div>
+          <div class="pipeline-row"><div><span>Negociação</span><strong>16%</strong></div><div class="bar-track"><i style="width:16%"></i></div></div>
+        </article>
+
+        <article class="content-card" id="contas">
+          <div class="card-heading"><div><h2>Contas de exemplo</h2><p>Nomes e valores inventados</p></div><span>SIMULADO</span></div>
+          <ul class="account-list">
+            <li><span class="account-icon">AL</span><span class="account-name">Aurora Logística</span><strong>R$ 420 mil</strong></li>
+            <li><span class="account-icon">VT</span><span class="account-name">Vértice Tech</span><strong>R$ 285 mil</strong></li>
+            <li><span class="account-icon">CM</span><span class="account-name">Campo Moderno</span><strong>R$ 198 mil</strong></li>
+          </ul>
+        </article>
+      </section>
+
+      <footer class="page-footer" id="insights">BELLATRIX · Projeto em construção · Sem integração real ou IA implementada</footer>
+    </main>
+  </div>
+</body>
+</html>
