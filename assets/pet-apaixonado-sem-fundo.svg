@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="sphereGrad" x1="0.68" y1="0.02" x2="0.32" y2="0.98">
+      <stop offset="0" stop-color="#0410FA"/>
+      <stop offset="1" stop-color="#8B94DF"/>
+    </linearGradient>
+  </defs>
+  <g id="pet">
+    <g id="sphere">
+      <circle id="sphere_body" cx="256" cy="256" r="160" fill="url(#sphereGrad)"/>
+    </g>
+    <g id="eye_left">
+      <path id="eye_left_shape" d="M 184.4 178.8 Q 192.32 214.88 228.4 222.8 Q 192.32 230.72 184.4 266.8 Q 176.48 230.72 140.4 222.8 Q 176.48 214.88 184.4 178.8 Z" fill="#FFFFFF" stroke="none"/>
+    </g>
+    <g id="eye_right">
+      <path id="eye_right_shape" d="M 322.59 178.8 Q 330.51 214.88 366.59 222.8 Q 330.51 230.72 322.59 266.8 Q 314.67 230.72 278.59 222.8 Q 314.67 214.88 322.59 178.8 Z" fill="#FFFFFF" stroke="none"/>
+    </g>
+    <g id="mouth">
+      <path id="mouth" d="M 227 300 Q 256 322 285 300" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>

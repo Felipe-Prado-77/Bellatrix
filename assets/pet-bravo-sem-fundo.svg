@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="sphereGrad" x1="0.68" y1="0.02" x2="0.32" y2="0.98">
+      <stop offset="0" stop-color="#0410FA"/>
+      <stop offset="1" stop-color="#8B94DF"/>
+    </linearGradient>
+  </defs>
+  <g id="pet">
+    <g id="sphere">
+      <circle id="sphere_body" cx="256" cy="256" r="160" fill="url(#sphereGrad)"/>
+    </g>
+    <g id="eye_left">
+      <path id="eye_left_shape" d="M 184.4 190.8 Q 191.42 222.78 223.4 229.8 Q 191.42 236.82 184.4 268.8 Q 177.38 236.82 145.4 229.8 Q 177.38 222.78 184.4 190.8 Z" fill="#FFFFFF" stroke="none"/>
+    </g>
+    <g id="eye_right">
+      <path id="eye_right_shape" d="M 322.59 190.8 Q 329.61 222.78 361.59 229.8 Q 329.61 236.82 322.59 268.8 Q 315.57 236.82 283.59 229.8 Q 315.57 222.78 322.59 190.8 Z" fill="#FFFFFF" stroke="none"/>
+    </g>
+    <g id="brows">
+      <path id="brow_1" d="M 198 184 L 240 202" fill="none" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round"/>
+      <path id="brow_2" d="M 314 184 L 272 202" fill="none" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round"/>
+    </g>
+    <g id="mouth">
+      <path id="mouth" d="M 236 293 L 276 293 Q 284 293 284 301 L 284 311 Q 284 319 276 319 L 236 319 Q 228 319 228 311 L 228 301 Q 228 293 236 293 Z" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>
